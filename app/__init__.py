@@ -6,6 +6,9 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+from flask_mail import Mail
+from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 
 app = Flask(__name__)
@@ -14,6 +17,9 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+mail = Mail(app)
+bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 
 if not app.debug:
@@ -31,7 +37,6 @@ if not app.debug:
             credentials=auth, secure=secure)
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
-
 
     if not os.path.exists('logs'):
         os.mkdir('logs')
