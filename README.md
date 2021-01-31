@@ -23,3 +23,7 @@ TODO:Sending a Password Reset Email (chp 10)
 # pybabel extract -F babel.cfg -k _l -o messages.pot .
 # pybabel update -i messages.pot -d app/translations
 # pybabel compile -d app/translations # generate .mo file
+
+# flask translate init it
+# flask translate update
+# flask translate compile

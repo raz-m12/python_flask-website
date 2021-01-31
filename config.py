@@ -19,3 +19,6 @@ class Config(object):
 
     # pagination
     POSTS_PER_PAGE = 3
+
+    # translator
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
