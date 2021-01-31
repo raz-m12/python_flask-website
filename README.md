@@ -12,3 +12,14 @@ python -m smtpd -n -c DebuggingServer localhost:8025 % python emulated email
 
 
 TODO:Sending a Password Reset Email (chp 10)
+
+# Workflow: create new translation repo
+# pybabel extract -F babel.cfg -k _l -o messages.pot .
+# pybabel init -i messages.pot -d app/translations -l it
+# pybabel compile -d app/translations
+
+
+# Workflow: Updating the current translations
+# pybabel extract -F babel.cfg -k _l -o messages.pot .
+# pybabel update -i messages.pot -d app/translations
+# pybabel compile -d app/translations # generate .mo file
