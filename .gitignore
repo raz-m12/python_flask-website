@@ -5,3 +5,7 @@ app/#*#
 logs/
 app.db
 env/
+app/translations/it/LC_MESSAGES/messages.mo
+.env
+app.db
+.vagrant/

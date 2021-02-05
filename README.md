@@ -27,3 +27,28 @@ TODO:Sending a Password Reset Email (chp 10)
 # flask translate init it
 # flask translate update
 # flask translate compile
+
+# Run elasticsearch server
+# To start service at startup see:
+# https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
+sudo -i service elasticsearch start
+# For server side see:
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04
+
+
+# Install vagrant and virtual box
+sudo apt install vagrant
+vagrant up
+vagrant ssh
+
+
+
+Develop unit tests
+Microsoft translator API
+Reset password feature using flask_mail
+Flask babel for english and italian translations
+full text search using elasticsearch integrated with SqlALchemy, events to update the two databases
+flask_login
+bootstrap
+logging via file and email
+SQLAlchemy events
