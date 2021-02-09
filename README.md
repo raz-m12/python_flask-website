@@ -1,5 +1,3 @@
-# python_flask-website
-
 flask shell
 flask run
 
@@ -41,6 +39,12 @@ sudo apt install vagrant
 vagrant up
 vagrant ssh
 
+# Other packages needed in production
+pip install gunicorn pymysql
+
+gunicorn -b localhost:8000 -w 4 pyweb:app
+
+
 
 
 Develop unit tests
@@ -52,3 +56,14 @@ flask_login
 bootstrap
 logging via file and email
 SQLAlchemy events
+
+sudo supervisorctl start microblog
+/etc/supervisor/conf.d/microblog.conf:
+/var/log/supervisor/pyweb*
+
+
+sudo service nginx reload
+/var/log/pyweb*: /etc/nginx/sites-enabled/pyweb
+
+vagrant reload --provision
+wlp3s0, enp2s0
