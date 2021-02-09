@@ -57,8 +57,8 @@ bootstrap
 logging via file and email
 SQLAlchemy events
 
-sudo supervisorctl start microblog
-/etc/supervisor/conf.d/microblog.conf:
+sudo supervisorctl start pyweb
+/etc/supervisor/conf.d/pyweb.conf:
 /var/log/supervisor/pyweb*
 
 
