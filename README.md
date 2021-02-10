@@ -55,7 +55,10 @@ full text search using elasticsearch integrated with SqlALchemy, events to updat
 flask_login
 bootstrap
 logging via file and email
-SQLAlchemy events
+SQLAlchemy events for updating elasticsearch
+Heroku deployment using gunicorn and psycopg2
+bootstrap popover support
+
 
 sudo supervisorctl start pyweb
 /etc/supervisor/conf.d/pyweb.conf:
