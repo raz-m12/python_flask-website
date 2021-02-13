@@ -44,7 +44,9 @@ pip install gunicorn pymysql
 
 gunicorn -b localhost:8000 -w 4 pyweb:app
 
-
+# Redis queue
+redis-server
+rq worker pyweb-tasks
 
 
 Develop unit tests
@@ -58,7 +60,9 @@ logging via file and email
 SQLAlchemy events for updating elasticsearch
 Heroku deployment using gunicorn and psycopg2
 bootstrap popover support
-
+user private messaging with dynamic notifications
+separate threads and worker processes for managing data asynchronously
+Task queues using Redis Queueq
 
 sudo supervisorctl start pyweb
 /etc/supervisor/conf.d/pyweb.conf:
