@@ -44,6 +44,9 @@ pip install gunicorn pymysql
 
 gunicorn -b localhost:8000 -w 4 pyweb:app
 
+# Redis queue
+redis-server
+rq worker pyweb-tasks
 
 
 
@@ -55,10 +58,16 @@ full text search using elasticsearch integrated with SqlALchemy, events to updat
 flask_login
 bootstrap
 logging via file and email
+SQLAlchemy events for updating elasticsearch
+Heroku deployment using gunicorn and psycopg2
+bootstrap popover support
+user private messaging with dynamic notifications
+separate threads and worker processes for managing data asynchronously
+Task queues using Redis Queueq
 SQLAlchemy events
 
-sudo supervisorctl start microblog
-/etc/supervisor/conf.d/microblog.conf:
+sudo supervisorctl start pyweb
+/etc/supervisor/conf.d/pyweb.conf:
 /var/log/supervisor/pyweb*
 
 
@@ -66,4 +75,9 @@ sudo service nginx reload
 /var/log/pyweb*: /etc/nginx/sites-enabled/pyweb
 
 vagrant reload --provision
-wlp3s0, enp2s0
+
+# Heroku
+SEARCHBOX_SSL_URL, SEARCHBOX_URL
+LOG_TO_STDOUT
+DATABASE_URL
+

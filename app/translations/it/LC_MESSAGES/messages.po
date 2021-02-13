@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-02-05 12:17+0100\n"
+"POT-Creation-Date: 2021-02-13 14:49+0100\n"
 "PO-Revision-Date: 2021-01-31 14:01+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:22
 #, fuzzy
 msgid "Please log in to access this page."
 msgstr "Effettua login per accedere a questa pagina."
@@ -40,7 +40,7 @@ msgstr "Ricorda Mi"
 #: app/auth/forms.py:12 app/auth/routes.py:28 app/forms.py:12
 #: app/templates/auth/login.html:5
 msgid "Sign In"
-msgstr "Registrati"
+msgstr "Accedi"
 
 #: app/auth/forms.py:17 app/auth/forms.py:36 app/forms.py:17 app/forms.py:36
 msgid "Email"
@@ -77,7 +77,7 @@ msgstr "Errore: la traduzione non è riuscita. "
 
 #: app/auth/email.py:8
 #, fuzzy
-msgid "[Microblog] Reset Your Password"
+msgid "[PyWeb] Reset Your Password"
 msgstr "Resetta la Password"
 
 #: app/auth/routes.py:21
@@ -104,7 +104,7 @@ msgstr "La tua password è stata resettata."
 msgid "About me"
 msgstr "A proposito di me"
 
-#: app/main/forms.py:14 app/main/forms.py:33
+#: app/main/forms.py:14 app/main/forms.py:33 app/main/forms.py:50
 msgid "Submit"
 msgstr "Invia"
 
@@ -112,81 +112,106 @@ msgstr "Invia"
 msgid "Say something"
 msgstr "Posta qualcosa"
 
-#: app/main/forms.py:37 app/main/routes.py:159
+#: app/main/forms.py:37 app/main/routes.py:164
 #, fuzzy
 msgid "Search"
 msgstr "Utente"
 
-#: app/main/routes.py:38
+#: app/main/forms.py:48
+msgid "Message"
+msgstr "Messaggio"
+
+#: app/main/routes.py:43
 msgid "Your post is now live!"
 msgstr "Il tuo post è ora pubblicato!"
 
-#: app/main/routes.py:47 app/templates/base.html:21
+#: app/main/routes.py:52 app/templates/base.html:21
 msgid "Home"
 msgstr "Casa"
 
-#: app/main/routes.py:62 app/templates/base.html:22
+#: app/main/routes.py:67 app/templates/base.html:22
 msgid "Explore"
 msgstr "Esplorare"
 
-#: app/main/routes.py:91
+#: app/main/routes.py:96
 msgid "Your changes have been saved."
 msgstr "Le modifiche sono state salvate."
 
-#: app/main/routes.py:96 app/templates/edit_profile.html:5
+#: app/main/routes.py:101 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Modifica Profilo"
 
-#: app/main/routes.py:107 app/main/routes.py:127
+#: app/main/routes.py:112 app/main/routes.py:132
 #, python-format
 msgid "User %(username)s not found."
 msgstr "Utente %(username)s non trovato."
 
-#: app/main/routes.py:110
+#: app/main/routes.py:115
 msgid "You cannot follow yourself!"
 msgstr "Non puoi seguire te stesso!"
 
-#: app/main/routes.py:114
+#: app/main/routes.py:119
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "Stai seguendo %(username)s!"
 
-#: app/main/routes.py:130
+#: app/main/routes.py:135
 msgid "You cannot unfollow yourself!"
 msgstr "Non puoi smettere di seguire te stesso!"
 
-#: app/main/routes.py:134
+#: app/main/routes.py:139
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "Non stai seguendo %(username)s."
 
-#: app/templates/_post.html:14
+#: app/main/routes.py:187
+#, fuzzy
+msgid "Your message has been sent."
+msgstr "La tua password è stata resettata."
+
+#: app/main/routes.py:189
+msgid "Send Message"
+msgstr "Invia Messaggio"
+
+#: app/main/routes.py:228
+msgid "An export task is currently in progress"
+msgstr "È attualmente in corso un'attività di esportazione"
+
+#: app/main/routes.py:230
+msgid "Exporting posts..."
+msgstr "Sto esportando i post"
+
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s ha detto %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "Tradurre"
 
 #: app/templates/base.html:4
 #, fuzzy
 msgid "Welcome to PyWeb"
-msgstr "Benvenuto a Microblog"
+msgstr "Benvenuto a PyWeb"
 
 #: app/templates/base.html:35
 msgid "Login"
 msgstr "Accedere"
 
-#: app/templates/base.html:38
+#: app/templates/base.html:38 app/templates/messages.html:4
+msgid "Messages"
+msgstr "Messaggi"
+
+#: app/templates/base.html:48
 msgid "Profile"
 msgstr "Profilo"
 
-#: app/templates/base.html:40
+#: app/templates/base.html:50
 msgid "Logout"
 msgstr "Disconnettersi"
 
-#: app/templates/base.html:78
+#: app/templates/base.html:100
 msgid "Error: Could not contact server."
 msgstr "Errore: Impossibile contattare il server"
 
@@ -195,13 +220,21 @@ msgstr "Errore: Impossibile contattare il server"
 msgid "Hi, %(username)s!"
 msgstr "Ciao, %(username)s!"
 
-#: app/templates/index.html:17 app/templates/user.html:41
+#: app/templates/index.html:17 app/templates/user.html:59
 msgid "Newer posts"
 msgstr "Nuovi post"
 
-#: app/templates/index.html:22 app/templates/user.html:46
+#: app/templates/index.html:22 app/templates/user.html:64
 msgid "Older posts"
 msgstr "Post precedenti"
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr "Messaggi più nuovi"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr "Messaggi più vecchi"
 
 #: app/templates/search.html:4
 msgid "Search Results"
@@ -215,35 +248,48 @@ msgstr "Risultati precedenti"
 msgid "Next results"
 msgstr "Prossimi risultati"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "Invia Messaggio a %(recipient)s"
+
 #: app/templates/user.html:8
 msgid "User"
 msgstr "Utente"
 
-#: app/templates/user.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:9
 msgid "Last seen on"
 msgstr "Visto l'ultima volta il"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:12
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d seguaci"
 
-#: app/templates/user.html:13
+#: app/templates/user.html:13 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
 msgstr "%(count)d seguente"
 
-#: app/templates/user.html:15
+#: app/templates/user.html:17
 msgid "Edit your profile"
 msgstr "Modifica il tuo profilo"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:23
+msgid "Export your posts"
+msgstr "Esporta i tuoi post"
+
+#: app/templates/user.html:31 app/templates/user_popup.html:20
 msgid "Follow"
 msgstr "Segui"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:38 app/templates/user_popup.html:27
 msgid "Unfollow"
 msgstr "Smettere di seguire"
+
+#: app/templates/user.html:45
+msgid "Send private message"
+msgstr "Invia un messaggio privato"
 
 #: app/templates/auth/login.html:12
 msgid "New User?"
@@ -281,6 +327,6 @@ msgstr "Si è verificato un errore imprevisto"
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "L'amministratore è stato avvisato. Ci dispiace per l'inconvenienza!"
 
-#~ msgid "[Microblog] Reset Your Password"
-#~ msgstr "[Microblog] Reimposta la tua password"
+#~ msgid "[PyWeb] Reset Your Password"
+#~ msgstr "[PyWeb] Reimposta la tua password"
 

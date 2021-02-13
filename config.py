@@ -17,7 +17,7 @@ class Config(object):
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['your-email@example.com']
+    ADMINS = ['razfv12@gmail.com']
     LANGUAGES = ['en', 'it']
 
     # pagination
@@ -27,3 +27,9 @@ class Config(object):
 
     # eleastic search
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+
+    # Heroku
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
+
+    # Redis
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
