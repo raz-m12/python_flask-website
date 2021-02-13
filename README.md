@@ -49,6 +49,7 @@ redis-server
 rq worker pyweb-tasks
 
 
+
 Develop unit tests
 Microsoft translator API
 Reset password feature using flask_mail
@@ -63,6 +64,7 @@ bootstrap popover support
 user private messaging with dynamic notifications
 separate threads and worker processes for managing data asynchronously
 Task queues using Redis Queueq
+SQLAlchemy events
 
 sudo supervisorctl start pyweb
 /etc/supervisor/conf.d/pyweb.conf:
@@ -73,9 +75,9 @@ sudo service nginx reload
 /var/log/pyweb*: /etc/nginx/sites-enabled/pyweb
 
 vagrant reload --provision
-wlp3s0, enp2s0
 
 # Heroku
 SEARCHBOX_SSL_URL, SEARCHBOX_URL
 LOG_TO_STDOUT
 DATABASE_URL
+
