@@ -9,3 +9,4 @@ app/translations/it/LC_MESSAGES/messages.mo
 .env
 app.db
 .vagrant/
+readme.hide

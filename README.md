@@ -1,81 +1,28 @@
-flask shell
-flask run
+# PyWeb
 
-The shell command is the second "core" command implemented by Flask,
-after run. The purpose of this command is to start a Python interpreter in the
-context of the application.
+PyWeb is a personal Python project integrating the use of the popular web
+development framework 'Flask' to create a simple website and it includes various
+featurs such as:
 
-python -m smtpd -n -c DebuggingServer localhost:8025 % python emulated email
-                                                     % service
+* Deployment on Heroku, using gunicorn
+* Posgres for Heroku database storage
+* Lightweight SQLite for local development
+* Unit tests
+* Microsoft translator API
+* Ability to register and reset password using flask_mail
+* Flask babel, for generating website's language, in English and Italian based on
+  browser's current language
+* Full text intelligent search using ElasticSearch, including SQLAlchemy events
+  for synchronization
+* Ability to create users using flask_login
+* Bootstrap for displaying web pages, including pop-over support for users' account
+* Logging via file, terminal and error-handling via email notifications
+* Support for private meassaging with dynamic notifications
+* Use of different threads and processes for exporting via email user's posts
+* Task queues (e.g. Redis Queue) for the communication between different
+  processes and to perform tasks asynchronously
+* Gravatar for generating avatars for every user
+* Ability to follow other user's posts
+* Pagination of posts
 
-
-TODO:Sending a Password Reset Email (chp 10)
-
-# Workflow: create new translation repo
-# pybabel extract -F babel.cfg -k _l -o messages.pot .
-# pybabel init -i messages.pot -d app/translations -l it
-# pybabel compile -d app/translations
-
-
-# Workflow: Updating the current translations
-# pybabel extract -F babel.cfg -k _l -o messages.pot .
-# pybabel update -i messages.pot -d app/translations
-# pybabel compile -d app/translations # generate .mo file
-
-# flask translate init it
-# flask translate update
-# flask translate compile
-
-# Run elasticsearch server
-# To start service at startup see:
-# https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
-sudo -i service elasticsearch start
-# For server side see:
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04
-
-
-# Install vagrant and virtual box
-sudo apt install vagrant
-vagrant up
-vagrant ssh
-
-# Other packages needed in production
-pip install gunicorn pymysql
-
-gunicorn -b localhost:8000 -w 4 pyweb:app
-
-# Redis queue
-redis-server
-rq worker pyweb-tasks
-
-
-Develop unit tests
-Microsoft translator API
-Reset password feature using flask_mail
-Flask babel for english and italian translations
-full text search using elasticsearch integrated with SqlALchemy, events to update the two databases
-flask_login
-bootstrap
-logging via file and email
-SQLAlchemy events for updating elasticsearch
-Heroku deployment using gunicorn and psycopg2
-bootstrap popover support
-user private messaging with dynamic notifications
-separate threads and worker processes for managing data asynchronously
-Task queues using Redis Queueq
-
-sudo supervisorctl start pyweb
-/etc/supervisor/conf.d/pyweb.conf:
-/var/log/supervisor/pyweb*
-
-
-sudo service nginx reload
-/var/log/pyweb*: /etc/nginx/sites-enabled/pyweb
-
-vagrant reload --provision
-wlp3s0, enp2s0
-
-# Heroku
-SEARCHBOX_SSL_URL, SEARCHBOX_URL
-LOG_TO_STDOUT
-DATABASE_URL
+The website can be found [here](https://pyweb-raz.herokuapp.com/).
