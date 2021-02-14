@@ -24,5 +24,6 @@ featurs such as:
 * Gravatar for generating avatars for every user
 * Ability to follow other user's posts
 * Pagination of posts
+* Custom avatars using [Gravatar.com](https://en.gravatar.com/)
 
 The website can be found [here](https://pyweb-raz.herokuapp.com/).
