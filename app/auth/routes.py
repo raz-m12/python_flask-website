@@ -62,7 +62,8 @@ def reset_password_request():
         if user:
             send_password_reset_email(user)
         flash(
-            _('Check your email for the instructions to reset your password'))
+            _('Check your email for the instructions to reset your password. Don\'t forget to'
+              ' check the spam folder!'))
         return redirect(url_for('auth.login'))
     return render_template('auth/reset_password_request.html',
                            title=_('Reset Password'), form=form)

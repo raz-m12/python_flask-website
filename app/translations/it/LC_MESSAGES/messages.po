@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-02-13 14:49+0100\n"
+"POT-Creation-Date: 2021-02-15 12:53+0100\n"
 "PO-Revision-Date: 2021-01-31 14:01+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: it\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: app/__init__.py:22
 #, fuzzy
 msgid "Please log in to access this page."
-msgstr "Effettua login per accedere a questa pagina."
+msgstr "Effettuare il login per accedere a questa pagina."
 
 #: app/auth/forms.py:9 app/auth/forms.py:16 app/forms.py:9 app/forms.py:16
 #: app/main/forms.py:11
@@ -44,13 +44,13 @@ msgstr "Accedi"
 
 #: app/auth/forms.py:17 app/auth/forms.py:36 app/forms.py:17 app/forms.py:36
 msgid "Email"
-msgstr "EMail"
+msgstr "Email"
 
 #: app/auth/forms.py:20 app/auth/forms.py:43 app/forms.py:20 app/forms.py:43
 msgid "Repeat Password"
 msgstr "Ripetere la Password"
 
-#: app/auth/forms.py:22 app/auth/routes.py:49 app/forms.py:22
+#: app/auth/forms.py:22 app/auth/routes.py:51 app/forms.py:22
 #: app/templates/auth/register.html:5
 msgid "Register"
 msgstr "Registrati"
@@ -78,31 +78,36 @@ msgstr "Errore: la traduzione non è riuscita. "
 #: app/auth/email.py:8
 #, fuzzy
 msgid "[PyWeb] Reset Your Password"
-msgstr "Resetta la Password"
+msgstr "[PyWeb] Reimpostare la Password"
 
 #: app/auth/routes.py:21
 msgid "Invalid username or password"
 msgstr "Nome utente o password errati"
 
-#: app/auth/routes.py:47
+#: app/auth/routes.py:49
 msgid "Congratulations, you are now a registered user!"
 msgstr "Congratulazioni, ora sei un utente registrato!"
 
-#: app/auth/routes.py:63
-msgid "Check your email for the instructions to reset your password"
-msgstr "Controlla la tua e-mail per le istruzioni per reimpostare la password"
+#: app/auth/routes.py:65
+#, fuzzy
+msgid ""
+"Check your email for the instructions to reset your password. Don't "
+"forget to check the spam folder!"
+msgstr ""
+"Controlla la tua e-mail per le istruzioni per reimpostare la password. "
+"Non dimenticare di guardare nella cartela di spam!"
 
-#: app/auth/routes.py:66
+#: app/auth/routes.py:69
 msgid "Reset Password"
 msgstr "Resetta la Password"
 
-#: app/auth/routes.py:80
+#: app/auth/routes.py:83
 msgid "Your password has been reset."
 msgstr "La tua password è stata resettata."
 
 #: app/main/forms.py:12
 msgid "About me"
-msgstr "A proposito di me"
+msgstr "Su di me"
 
 #: app/main/forms.py:14 app/main/forms.py:33 app/main/forms.py:50
 msgid "Submit"
@@ -115,7 +120,7 @@ msgstr "Posta qualcosa"
 #: app/main/forms.py:37 app/main/routes.py:164
 #, fuzzy
 msgid "Search"
-msgstr "Utente"
+msgstr "Ricerca"
 
 #: app/main/forms.py:48
 msgid "Message"
@@ -167,7 +172,7 @@ msgstr "Non stai seguendo %(username)s."
 #: app/main/routes.py:187
 #, fuzzy
 msgid "Your message has been sent."
-msgstr "La tua password è stata resettata."
+msgstr "Il tuo messaggio è stato inviato."
 
 #: app/main/routes.py:189
 msgid "Send Message"
@@ -179,7 +184,7 @@ msgstr "È attualmente in corso un'attività di esportazione"
 
 #: app/main/routes.py:230
 msgid "Exporting posts..."
-msgstr "Sto esportando i post"
+msgstr "Sto esportando i post..."
 
 #: app/templates/_post.html:16
 #, python-format
