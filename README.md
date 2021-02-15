@@ -15,14 +15,13 @@ featurs such as:
 * Full text intelligent search using ElasticSearch, including SQLAlchemy events
   for synchronization
 * Ability to create users using flask_login
-* Bootstrap for displaying web pages, including pop-over support for users' account
+* Bootstrap for displaying web pages, including pop-over support for users' accounts
 * Logging via file, terminal and error-handling via email notifications
 * Support for private meassaging with dynamic notifications
 * Use of different threads and processes for exporting via email user's posts
 * Task queues (e.g. Redis Queue) for the communication between different
   processes and to perform tasks asynchronously
-* Gravatar for generating avatars for every user
-* Ability to follow other user's posts
+* Ability to follow other users' posts
 * Pagination of posts
 * Custom avatars using [Gravatar.com](https://en.gravatar.com/)
 
