@@ -1,8 +1,8 @@
 # PyWeb
 
-PyWeb is a personal Python project integrating the use of the popular web
-development framework 'Flask' to create a simple website and it includes various
-featurs such as:
+This is a website made in Python using [Flask](https://flask.palletsprojects.com/en/2.1.x/). It was inspired by [Migue Grinberg's mega Flask tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
+
+# Features
 
 * Deployment on Heroku, using gunicorn
 * Posgres for Heroku database storage
@@ -25,4 +25,3 @@ featurs such as:
 * Pagination of posts
 * Custom avatars using [Gravatar.com](https://en.gravatar.com/)
 
-The website can be found [here](https://pyweb-raz.herokuapp.com/).
